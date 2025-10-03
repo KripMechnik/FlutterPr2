@@ -59,6 +59,38 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
+            Padding(
+                padding: padding,
+                child: ElevatedButton(
+                    onPressed: () {
+                      _changeAlignment(10);
+                    },
+                    child: Text("Изменить отступ на 10")),
+            ),
+            Padding(
+              padding: padding,
+              child: ElevatedButton(
+                  onPressed: () {
+                    _changeAlignment(20);
+                  },
+                  child: Text("Изменить отступ на 20")),
+            ),
+            Padding(
+              padding: padding,
+              child: ElevatedButton(
+                  onPressed: () {
+                    _changeAlignment(30);
+                  },
+                  child: Text("Изменить отступ на 30")),
+            ),
+            Padding(
+              padding: padding,
+              child: ElevatedButton(
+                  onPressed: () {
+                    _changeAlignment(40);
+                  },
+                  child: Text("Изменить отступ на 40")),
+            )
           ],
         ),
       ),
