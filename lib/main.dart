@@ -29,6 +29,14 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  EdgeInsets padding = EdgeInsets.only(bottom: 10);
+
+  void _changeAlignment(double padding) {
+    setState(() {
+      this.padding = EdgeInsets.only(bottom: padding);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,11 +45,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: const Text(
-          'Алексенко Дмитрий Тарасович\nГруппа: ИКБО-06-22\n22И0124',
-          textAlign: TextAlign.center,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              color: Colors.red,
+              padding: EdgeInsets.all(5),
+              child: Text(
+                'Текущий отступ: ${padding.bottom}',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
+
+
